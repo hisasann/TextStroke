@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		@font-face {
+			font-family: 'Sniglet';
+			font-style: normal;
+			font-weight: 1000;
+			src: local('Sniglet'), url(http://themes.googleusercontent.com/static/fonts/sniglet/v3/1ZHjsYpklbehZSiZpN0bvr3hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
+		}
+
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+
+		body {
+			background-color: #525152;
+		}
+
+		.margin {
+			margin-top: 250px;
+		}
+
+		.stroke {
+			display: block;
+			text-align: center;
+			color: #09F;
+			font-size: 120px;
+			font-family: 'Sniglet', cursive, sans-serif;
+
+			-webkit-text-fill-color: #888; /* Will override color (regardless of order) */
+			-webkit-text-stroke-width: 5px;
+			-webkit-text-stroke-color: #888;
+
+			-webkit-margin-before: 0.67em;
+			-webkit-margin-after: 0.67em;
+			-webkit-margin-start: 0px;
+			-webkit-margin-end: 0px;
+
+			animation-timing-function: ease-out;
+
+			text-shadow:
+			3px 3px 0 #000,
+			-1px -1px 0 #000,
+			1px -1px 0 #000,
+			-1px 1px 0 #000,
+			1px 1px 0 #000;
+
+			-webkit-animation-name: colorchange, rotate, fade;
+			-webkit-animation-iteration-count: infinite;	/* 数字にすると指定した回数だけ繰り返す */
+			-webkit-animation-direction: alternate;
+			-webkit-animation-duration: 2s;
+		}
+
+		@-webkit-keyframes colorchange {
+			0% {
+				-webkit-text-stroke: 10px #09F;
+				letter-spacing: 0;
+			}
+			100% {
+				-webkit-text-stroke: 20px #0F9;
+				letter-spacing: 20px;
+			}
+		}
+
+		@-webkit-keyframes rotate {
+			0% {
+				-webkit-transform: rotate(0deg);
+			}
+			50% {
+				-webkit-transform: rotate(10deg);
+			}
+			100% {
+				-webkit-transform: rotate(-10deg);
+			}
+		}
+
+		@-webkit-keyframes fade {
+			0% {opacity: 0.1;}
+			50% {opacity: 0.3;}
+			70% {opacity: 0.9;}
+			90% {opacity: 0.6;}
+			100% {opacity: 0.1;}
+		}
+	</style>
+	<script src="jquery.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	$(function() {
+		var elem = $("#stroke");
+	});
+	</script>
+</head>
+<body>
+	<div class="margin"></div>
+	<h1 id="stroke" class="stroke">
+		HISASANN
+	</h1>
+</body>
+</html>
